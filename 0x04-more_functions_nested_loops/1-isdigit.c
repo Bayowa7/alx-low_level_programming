@@ -1,19 +1,20 @@
 #include "main.h"
-include <ctype.h>
 /**
- * _isdigit - function that checks a digit
- * @c: return int type
- * Return: return 0 on success and 1 on fail
+ * _isdigit - function that checks a digit (0 through 9).
+ * @c: An inout integer
+ * Return: 1 if c is a digit or 0 otherwise
  */
 int _isdigit(int c)
 {
- int i = isdigit(c);
- if (i > 0)
+ char i = '0';
+ int isdigit = 0;
+ for (; i <= '9'; i++)
  {
-  return (1);
+  if (i == c)
+  {
+   isdigit = 1;
+   break;
+  }
  }
- else
- {
-  return (0);
- }
+ return (isdigit);
 }
